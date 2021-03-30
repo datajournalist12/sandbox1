@@ -4,10 +4,13 @@
 </template>
 
 <script lang="ts">
+
+import store            from '../store';
+
 export default {
   computed: {
     counter() {
-      return this.$store.counter
+      return store.getters["count"]
     }
   }
 }

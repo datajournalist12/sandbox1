@@ -1,9 +1,12 @@
 import { createStore } from 'vuex'
 
 const store = createStore({
-  state() {
-    return {
+  state: {
       counter: 0
+  },
+  getters: {
+    count: state => {
+      return state.counter;
     }
   }
 })
